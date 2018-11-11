@@ -2,7 +2,7 @@
   "name": "json-api-normalizer",
   "version": "0.4.12",
   "description": "JSON API response normalizer",
-  "main": "src/normalizer.js",
+  "main": "src/normalize.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p",
     "clean": "cross-env rimraf dist coverage lib",
