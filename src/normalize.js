@@ -46,11 +46,13 @@ function extractRelationships(relationships, { camelizeKeys, camelizeTypeValues 
         ret[name].data = relationship.data.map(e => ({
           id: e.id,
           type: camelizeTypeValues ? camelCase(e.type) : e.type,
+          meta: e.meta || {},
         }));
       } else if (!isNull(relationship.data)) {
         ret[name].data = {
           id: relationship.data.id,
           type: camelizeTypeValues ? camelCase(relationship.data.type) : relationship.data.type,
+          meta: relationship.data.meta  || {}
         };
       } else {
         ret[name].data = relationship.data;
